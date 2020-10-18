@@ -1,0 +1,102 @@
+@import "variables";
+@import "functions";
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: $bg-color1;
+  color: set-text-color($dark-color);
+  font-family: $main-font;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  height: 100vh;
+  width: 90%;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+
+  input {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+  }
+  input::placeholder {
+    color: set-text-color($bg-color2);
+  }
+  .input-value {
+    background-color: $bg-color2;
+    color: set-text-color($bg-color2);
+  }
+
+  .result {
+    color: set-text-color($bg-color1);
+  }
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-evenly;
+
+  .btn {
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .calculate-btn {
+    background-color: $bg-color2;
+    color: set-text-color($bg-color2);
+
+    &:hover,
+    &:focus {
+      background-color: lighten($bg-color2, 10%);
+    }
+  }
+
+  .refresh-btn {
+    background-color: $dark-color;
+    color: set-text-color($dark-color);
+
+    &:hover,
+    &:focus {
+      background-color: lighten($dark-color, 10%);
+    }
+  }
+}
+
+#form {
+  &-a {
+    margin-bottom: 5rem;
+  }
+}
+
+// Responsive Design Settings
+
+@media screen and (min-width: 500px) {
+  .container {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 30%;
+  }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Degrees Converter</title>
+  </head>
+  <body>
+    <div>
+      <h1>Degrees Converter</h1>
+    </div>
+    <div class="container">
+      <!-- Fahrenheit to Celsius -->
+      <form id="form-a" class="form-content">
+        <h2>Fahrenheit to Celsius</h2>
+        <input
+          type="number"
+          id="fahrenheit-input-value"
+          class="input-value"
+          placeholder="Insert Fahrenheit Value"
+        />
+        <input
+          type="number"
+          id="celsius-result"
+          class="result"
+          disabled
+          placeholder="Celsius Degrees"
+        />
+        <div class="buttons-container">
+          <button id="celsius-btn" class="btn calculate-btn">
+            Calculate
+          </button>
+          <button id="f-to-c-refresh-btn" class="btn refresh-btn">
+            Refresh
+          </button>
+        </div>
+      </form>
+
+      <!-- Celsius to Fahrenheit -->
+      <form id="form-b" class="form-content">
+        <h2>Celsius to Fahrenheit</h2>
+        <input
+          type="number"
+          id="celsius-input-value"
+          class="input-value"
+          placeholder="Insert Celsius Value"
+        />
+        <input
+          type="number"
+          id="fahrenheit-result"
+          class="result"
+          disabled
+          placeholder="Fahrenheit Degrees"
+        />
+        <div class="buttons-container">
+          <button id="fahrenheit-btn" class="btn calculate-btn">
+            Calculate
+          </button>
+          <button id="c-to-f-refresh-btn" class="btn refresh-btn">
+            Refresh
+          </button>
+        </div>
+      </form>
+    </div>
+    <!-- Script -->
+    <script src="./script.js"></script>
+  </body>
+</html>
